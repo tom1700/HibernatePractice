@@ -1,0 +1,138 @@
+<div class="admin">
+    <div class="content-container">
+        <div class="object-container">
+            <h2 class="object-title">Suppliers</h2>
+            <div class="row">
+                <div class="object-form">
+                    <input v-model="supplierForm.city" type="text" name="city" placeholder="city">
+                    <input v-model="supplierForm.zipCode" type="text" name="zipCode" placeholder="zip code">
+                    <input v-model="supplierForm.street" type="text" name="street" placeholder="street">
+                    <input v-model="supplierForm.bankAccount" type="text" name="bankAccount" placeholder="bank account">
+                    <input v-model="supplierForm.companyName" type="text" name="companyName" placeholder="company name">
+                    <button v-on:click="post($event, 'supplier')">Save</button>
+                </div>
+                <div class="object-list">
+                    <table>
+                        <tr>
+                            <th>Id</th>
+                            <th>Company Name</th>
+                            <th>Bank Account</th>
+                            <th>City</th>
+                            <th>Zip Code</th>
+                            <th>Street</th>
+                        </tr>
+                        <tr v-for="supplier in supplierList">
+                            <td>{{ supplier.id }}</td>
+                            <td>{{ supplier.companyName }} </td>
+                            <td>{{ supplier.bankAccount }} </td>
+                            <td>{{ supplier.city }}</td>
+                            <td>{{ supplier.zipCode }}</td>
+                            <td>{{ supplier.street }}</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="object-container">
+            <h2 class="object-title">Customers</h2>
+            <div class="row">
+                <div class="object-list">
+                    <table>
+                        <tr>
+                            <th>Id</th>
+                            <th>Company Name</th>
+                            <th>Discount</th>
+                            <th>City</th>
+                            <th>Zip Code</th>
+                            <th>Street</th>
+                        </tr>
+                        <tr v-for="customer in customerList">
+                            <td>{{ customer.id }}</td>
+                            <td>{{ customer.companyName }} </td>
+                            <td>{{ customer.bankAccount }} </td>
+                            <td>{{ customer.city }}</td>
+                            <td>{{ customer.zipCode }}</td>
+                            <td>{{ customer.street }}</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="object-container">
+            <h2 class="object-title">Products</h2>
+            <div class="row">
+                <div class="object-form">
+                    <form action="">
+                        <input v-model="productForm.productName" type="text" name="productName" placeholder="product name">
+                        <input v-model="productForm.unitsOnStock" type="text" name="unitsOnStock" placeholder="units on stock">
+                        <input v-model="productForm.supplierId" type="text" name="supplierId" placeholder="supplier id">
+                        <input v-model="productForm.categoryId" type="text" name="categoryId" placeholder="category id">
+                        <button v-on:click="post($event, 'product')">Save</button>
+                    </form>
+                </div>
+                <div class="object-list">
+                    <table>
+                        <tr>
+                            <th>Id</th>
+                            <th>Product Name</th>
+                            <th>Units On Stock</th>
+                            <th>Supplier Id</th>
+                            <th>Category ID</th>
+                        </tr>
+                        <tr v-for="product in productList">
+                            <td>{{ product.id }}</td>
+                            <td>{{ product.productName }} </td>
+                            <td>{{ product.unitsOnStock }} </td>
+                            <td>{{ product.supplierId }}</td>
+                            <td>{{ product.categoryId }}</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="object-container">
+            <h2 class="object-title">Category</h2>
+            <div class="row">
+                <div class="object-form">
+                    <form action="">
+                        <input v-model="categoryForm.name" type="text" name="categoryName" placeholder="category name">
+                        <button v-on:click="post($event, 'category')">Save</button>
+                    </form>
+                </div>
+                <div class="object-list">
+                    <table>
+                        <tr>
+                            <th>Id</th>
+                            <th>Category Name</th>
+                        </tr>
+                        <tr v-for="category in categoryList">
+                            <td>{{ category.id }}</td>
+                            <td>{{ category.name }} </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="object-container">
+            <h2 class="object-title">Transactions</h2>
+            <div class="row">
+                <div class="object-list">
+                    <table>
+                        <tr>
+                            <th>Transaction Number</th>
+                            <th>Customer Id</th>
+                            <th>Company Name</th>
+                        </tr>
+                        <tr v-for="transaction in transactionList">
+                            <td>{{ transaction.transactionNumber }}</td>
+                            <td>{{ transaction.customerId }}</td>
+                            <td>{{ transaction.companyName }}</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

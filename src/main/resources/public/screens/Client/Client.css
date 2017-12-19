@@ -1,0 +1,54 @@
+.client {
+}
+
+.client .content-container {
+    max-width: 1024px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.client .object-container {
+    border: solid 1px #000;
+    min-height: 400px;
+}
+
+.client .object-title {
+    text-align: center;
+    border-bottom: solid 1px #000;
+    margin: 0;
+}
+
+.client .row {
+    display: flex;
+    min-height: 400px;
+}
+
+.client .object-form {
+    flex: 0.3;
+}
+
+.client .object-form input[type='text'] {
+    width:100%;
+    padding: 4px;
+    margin: 8px 0;
+}
+
+.client .object-list {
+    flex: 1;
+    border-left: solid 1px #000;
+    overflow: scroll;
+}
+
+.client .object-list table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.client .object-list table th{
+    height: 32px;
+    border: solid 1px #000;
+}
+
+.client .object-container .row .object-list table td{
+    text-align: center;
+}

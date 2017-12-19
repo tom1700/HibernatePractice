@@ -1,0 +1,43 @@
+<div class="client">
+    <div class="content-container">
+        <div class="object-container">
+            <h2 class="object-title">Products</h2>
+            <div class="row">
+                <div class="object-list">
+                    <table>
+                        <tr>
+                            <th>Id</th>
+                            <th>Product Name</th>
+                            <th>Units On Stock</th>
+                            <th>Supplier Id</th>
+                            <th>Category ID</th>
+                            <th>Add to cart</th>
+                        </tr>
+                        <tr v-for="product in productList">
+                            <td>{{ product.id }}</td>
+                            <td>{{ product.productName }} </td>
+                            <td>{{ product.unitsOnStock }} </td>
+                            <td>{{ product.supplierId }}</td>
+                            <td>{{ product.categoryId }}</td>
+                            <td><button v-on:click="addToCart(product)">Add</button></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        Cart:
+        <div v-for="product in cart" :key="product.id">
+            Name: {{product.product.productName}} Amount: {{product.amount}}
+        </div>
+        <div class="object-form">
+            <form action="">
+                <input v-model="customerForm.city" type="text" name="city" placeholder="city">
+                <input v-model="customerForm.zipCode" type="text" name="zipCode" placeholder="zip code">
+                <input v-model="customerForm.street" type="text" name="street" placeholder="street">
+                <input v-model="customerForm.companyName" type="text" name="companyName" placeholder="company name">
+                <button v-on:click="buy">Buy</button>
+            </form>
+        </div>
+
+    </div>
+</div>

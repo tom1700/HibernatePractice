@@ -1,0 +1,9 @@
+@import "/screens/App/App.css";
+@import "/screens/Home/Home.css";
+@import "/screens/Admin/Admin.css";
+@import "/screens/Client/Client.css";
+
+body {
+    padding: 0;
+    margin: 0;
+}

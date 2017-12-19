@@ -1,0 +1,52 @@
+.admin .content-container {
+    max-width: 1024px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.admin .content-container .object-container {
+    border: solid 1px #000;
+    min-height: 400px;
+}
+
+.admin .content-container .object-container .object-title {
+    text-align: center;
+    border-bottom: solid 1px #000;
+    margin: 0;
+}
+
+.admin .content-container .object-container .row {
+    display: flex;
+    min-height: 400px;
+}
+
+.admin .content-container .object-container .row .object-form {
+    flex: 0.3;
+    border-right: solid 1px #000;
+}
+
+.admin .content-container .object-container .row .object-form input[type='text'] {
+    width:100%;
+    padding: 4px;
+    margin: 8px 0;
+}
+
+.admin .content-container .object-container .row .object-list {
+    flex: 1;
+    border-left: solid 1px #000;
+    overflow: scroll;
+}
+
+.admin .content-container .object-container .row .object-list table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.admin .content-container .object-container .row .object-list table th{
+    height: 32px;
+    border: solid 1px #000;
+}
+
+.admin .content-container .object-container .row .object-list table td{
+    text-align: center;
+}

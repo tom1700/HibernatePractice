@@ -1,0 +1,20 @@
+.home {
+}
+
+.home .content-container {
+    max-width: 1024px;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+}
+
+.home .content-container .content {
+    text-align: center;
+}
+
+.home .content-container .content a {
+    text-decoration: none;
+    color: blue;
+    font-size: 20px;
+}

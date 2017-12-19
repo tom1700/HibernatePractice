@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property
+                name="connection.driver_class">org.apache.derby.jdbc.ClientDriver
+        </property>
+        <property
+                name="connection.url">jdbc:derby://localhost/IMorawskiJPAPractice
+        </property>
+        <!-- <property name="hibernate.hbm2ddl.auto">create</property> -->
+        <mapping class="com.IMorawskiJPAPractice.entities.Product"></mapping>
+        <mapping class="com.IMorawskiJPAPractice.entities.Supplier"></mapping>
+        <mapping class="com.IMorawskiJPAPractice.entities.Category"></mapping>
+        <mapping class="com.IMorawskiJPAPractice.entities.Company"></mapping>
+        <mapping class="com.IMorawskiJPAPractice.entities.Address"></mapping>
+        <mapping class="com.IMorawskiJPAPractice.entities.Sale"></mapping>
+        <mapping class="com.IMorawskiJPAPractice.entities.Customer"></mapping>
+        <mapping class="com.IMorawskiJPAPractice.entities.ProductSale"></mapping>
+    </session-factory>
+</hibernate-configuration>
